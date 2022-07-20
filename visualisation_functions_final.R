@@ -195,7 +195,9 @@ prep.cond.box <- function(aoi, area, path.box){
   
   
   png(paste0(path.box,"scatter -", area, ".png"))
-  plot(rain0$rain0.sum, ls$ls.sum)
+  
+  plot(rain0$rain0.sum, ls$ls.sum, xlab = "logarithmic monthly precipitation", ylab = "logarithmic frequency",
+       main = paste0(area, " - Scatterplot Landslides vs. Precipitation"))
   dev.off()
   
   
